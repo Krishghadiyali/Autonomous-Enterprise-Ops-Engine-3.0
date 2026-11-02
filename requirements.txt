@@ -21,3 +21,6 @@ langgraph-checkpoint-sqlite
 langsmith
 pytest
 httpx
+
+# for Streamlit Community Cloud deployment
+pysqlite3-binary; sys_platform == 'linux'

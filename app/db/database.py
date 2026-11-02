@@ -16,11 +16,11 @@ def _get_or_create_pool() -> pooling.MySQLConnectionPool:
             pool_name="ops_pool",
             pool_size=5,
             pool_reset_session=True,
-            host=os.getenv("DB_HOST", "localhost"),
-            port=int(os.getenv("DB_PORT", "3306")),
-            user=os.getenv("DB_USER", "root"),
-            password=os.getenv("DB_PASS", ""),
-            database=os.getenv("DB_NAME", "enterprise_ops_db"),
+            host=os.getenv("DB_HOST"),
+            port=int(os.getenv("DB_PORT")),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASS"),
+            database=os.getenv("DB_NAME"),
         )
     return _db_pool
 
